@@ -5,9 +5,9 @@ package ru.mtuci.java.labpoint;
  * * **/
 public class Point2d {
 /** координата X **/
-    protected double xCoord;
+    private double xCoord;
 /** координата Y **/
-    protected double yCoord;
+    private double yCoord;
 /** Конструктор инициализации **/
     public Point2d ( double x, double y) {
         xCoord = x;

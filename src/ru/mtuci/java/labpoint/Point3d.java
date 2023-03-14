@@ -7,8 +7,7 @@ public class Point3d extends Point2d {
 
     /** Конструктор инициализации **/
     public Point3d ( double x, double y, double z) {
-        xCoord = x;
-        yCoord = y;
+        super(x, y);
         zCoord = z;
     }
     /** Конструктор по умолчанию. **/
@@ -29,14 +28,16 @@ public class Point3d extends Point2d {
     /** Вычисление расстояния между точками **/
     public double distanceTo(Point3d o){
 
-        return Math.sqrt((Math.pow((o.xCoord - this.xCoord),2)) +
-                (Math.pow((o.yCoord - this.yCoord),2)) +
+        return Math.sqrt((Math.pow((o.getX() - this.getX()),2)) +
+                (Math.pow((o.getY() - this.getY()),2)) +
                 (Math.pow((o.zCoord - this.zCoord),2)));
     }
 
     /** Проверка на равенство **/
     public boolean equals(Point3d o){
-        if(this.xCoord == o.xCoord && this.yCoord == o.yCoord && this.zCoord == o.zCoord) return true;
+        if(this.getX() == o.getX() &&
+                this.getY() == o.getY() &&
+                this.zCoord == o.zCoord) return true;
         else return false;
     }
 
